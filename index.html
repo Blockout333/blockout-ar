@@ -317,11 +317,15 @@
   }
   .social a:hover {
     transform: translateY(-3px);
-    border-color: var(--border-hover);
-    color: var(--yellow);
+    border-color: rgba(255,255,255,0.28);
     background: rgba(18, 24, 40, 0.95);
   }
   .social a svg { width: 22px; height: 22px; }
+  /* Tinte de hover por marca */
+  .social a.s-ig:hover  { box-shadow: 0 6px 18px rgba(214,41,118,0.35); }
+  .social a.s-tt:hover  { box-shadow: 0 6px 18px rgba(37,244,238,0.30); }
+  .social a.s-fb:hover  { box-shadow: 0 6px 18px rgba(24,119,242,0.35); }
+  .social a.s-map:hover { box-shadow: 0 6px 18px rgba(234,67,53,0.35); }
 
   .footer {
     margin-top: 26px;
@@ -421,17 +425,24 @@
   </a>
 
   <nav class="social" aria-label="Redes sociales">
-    <a href="https://instagram.com/blockout.ar" target="_blank" rel="noopener" aria-label="Instagram">
-      <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+    <a class="s-ig" href="https://instagram.com/blockout.ar" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <defs><linearGradient id="ig-grad" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#FEDA75"/><stop offset=".25" stop-color="#FA7E1E"/><stop offset=".5" stop-color="#D62976"/><stop offset=".75" stop-color="#962FBF"/><stop offset="1" stop-color="#4F5BD5"/>
+        </linearGradient></defs>
+        <rect width="20" height="20" x="2" y="2" rx="5" stroke="url(#ig-grad)"/><circle cx="12" cy="12" r="4" stroke="url(#ig-grad)"/><circle cx="17.5" cy="6.5" r="1.2" fill="url(#ig-grad)" stroke="none"/></svg>
     </a>
-    <a href="https://www.tiktok.com/@blockout.ar" target="_blank" rel="noopener" aria-label="TikTok">
-      <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19.6 6.3a4.85 4.85 0 0 1-3-4.3h-3.5v13.7a2.85 2.85 0 0 1-5.3 1.4 2.85 2.85 0 0 1 3.5-4.2v-3.6a6.36 6.36 0 0 0-1-.1A6.4 6.4 0 1 0 16.7 16V9.3a8.27 8.27 0 0 0 4.8 1.5V7.3c-.6 0-1.3-.3-1.9-1z"/></svg>
+    <a class="s-tt" href="https://www.tiktok.com/@blockout.ar" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg viewBox="0 0 24 24">
+        <path d="M19.6 6.3a4.85 4.85 0 0 1-3-4.3h-3.5v13.7a2.85 2.85 0 0 1-5.3 1.4 2.85 2.85 0 0 1 3.5-4.2v-3.6a6.36 6.36 0 0 0-1-.1A6.4 6.4 0 1 0 16.7 16V9.3a8.27 8.27 0 0 0 4.8 1.5V7.3c-.6 0-1.3-.3-1.9-1z" fill="#25F4EE" transform="translate(-0.9,-0.6)"/>
+        <path d="M19.6 6.3a4.85 4.85 0 0 1-3-4.3h-3.5v13.7a2.85 2.85 0 0 1-5.3 1.4 2.85 2.85 0 0 1 3.5-4.2v-3.6a6.36 6.36 0 0 0-1-.1A6.4 6.4 0 1 0 16.7 16V9.3a8.27 8.27 0 0 0 4.8 1.5V7.3c-.6 0-1.3-.3-1.9-1z" fill="#FE2C55" transform="translate(0.9,0.6)"/>
+        <path d="M19.6 6.3a4.85 4.85 0 0 1-3-4.3h-3.5v13.7a2.85 2.85 0 0 1-5.3 1.4 2.85 2.85 0 0 1 3.5-4.2v-3.6a6.36 6.36 0 0 0-1-.1A6.4 6.4 0 1 0 16.7 16V9.3a8.27 8.27 0 0 0 4.8 1.5V7.3c-.6 0-1.3-.3-1.9-1z" fill="#FFFFFF"/></svg>
     </a>
-    <a href="https://facebook.com/blockout.ar.oficial" target="_blank" rel="noopener" aria-label="Facebook">
-      <svg fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9V15h-2.5v-3h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 3h-2.3v6.9C18.3 21.1 22 17 22 12z"/></svg>
+    <a class="s-fb" href="https://facebook.com/blockout.ar.oficial" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg fill="#1877F2" viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9V15h-2.5v-3h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 3h-2.3v6.9C18.3 21.1 22 17 22 12z"/></svg>
     </a>
-    <a href="https://maps.google.com/?q=Blockout+Moron" target="_blank" rel="noopener" aria-label="Cómo llegar">
-      <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <a class="s-map" href="https://maps.google.com/?q=Blockout+Moron" target="_blank" rel="noopener" aria-label="Cómo llegar">
+      <svg fill="none" stroke="#EA4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
     </a>
   </nav>
 
