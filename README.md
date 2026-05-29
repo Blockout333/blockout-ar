@@ -5,7 +5,10 @@ Sitio estático vanilla HTML + CSS, sin build step.
 
 ## Deploy
 
-Conectado a Cloudflare Workers/Pages. Cada push a `main` despliega automáticamente.
+Conectado a Cloudflare Workers Builds. Cada push a `master` despliega automáticamente.
+
+> Requisito: la Cloudflare GitHub App debe tener acceso al repo `Blockout333/blockout-ar`
+> (github.com/settings/installations → Cloudflare Workers and Pages → repos seleccionados).
 
 URL: <https://blockout.ar>
 
